@@ -1,0 +1,5 @@
+/bin/
+*.db
+config.yaml
+node_modules/
+web/dist/

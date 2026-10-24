@@ -1,0 +1,10 @@
+services:
+  gatewatch:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    network_mode: host        # needed to see the host's real interface
+    cap_drop: [ALL]
+    cap_add: [NET_RAW, NET_ADMIN]
+    restart: unless-stopped
+    command: ["-iface", "eth0", "-ports", "80,443", "-tls-ports", "443"]

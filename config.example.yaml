@@ -1,0 +1,5 @@
+# Planned: config file support. For now use CLI flags (see `gatewatch -h`).
+interface: eth0
+ports: [80, 443]
+tls_ports: [443]
+half_open_timeout: 5s
